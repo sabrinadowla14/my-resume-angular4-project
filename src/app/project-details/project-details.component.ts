@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
 
 export class Project {
     name: string;
@@ -10,79 +9,25 @@ export class Project {
 }
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  animations: [
-
-  ]
+  selector: 'project-details',
+  templateUrl: './project-details.component.html',
+  styleUrls: ['./project-details.css'],
+  inputs: ['project']
 })
-export class AppComponent {
-  jobPosition = 'Front End Developer.';
-  favSkills = 'Angular';
-  logoUrl = 'http://linked.in/linkedinlogopng';
-  buttonState = 'true';
+
+export class ProjectDetailsComponent {
   projectTitle = 'List of Projects:';
   projects= PROJECTS;
   currentProject = Project;
+  
   
   showProject(item) {
 	  this.currentProject = item;
 
 	}
 
-  typed:string = '';
-  schools = [
-  {
-  name: 'Udacity',
-  major: 'Full Stack Web Developer'
-  },
-  {
-  name: 'University of MN',
-  major: 'Electrical Engineering'
-  },
-  {
-  name: 'Metrostate',
-  major: 'Computer Information Systems'
-  }
-
-  ]
-
-  skills = [
-      {
-        name: 'Angular'
-
-      },
-      {
-        name: 'JavaScript',
-
-      },
-      {
-        name: 'Python',
-
-       },
-       {
-        name: 'HTML5',
-
-       },
-       {
-        name: 'CSS3',
-
-       },
-       {
-        name: 'PostgreSQL',
-
-       }
-
-       ]
-
-  myFunc(name) {
-
-  console.log(name.value);
-  }
-  }
-
-  var PROJECTS: Project[] = [
+}
+var PROJECTS: Project[] = [
         {
             "name": "Item Catalog",
             "shortName": "catalog",

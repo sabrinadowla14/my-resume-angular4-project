@@ -1,0 +1,32 @@
+header {
+    background:#bebebe;
+}
+
+#logo {
+
+    display:block;
+}
+
+ul {
+    list-style-type:none;
+    float:right;
+    margin:0;
+    padding:0;
+}
+
+ul li {
+    display:inline;
+    float:left;
+}
+
+ul li a {
+    color:#fff;
+    padding:15px 30px;
+    display:block;
+    text-transform:uppercase;
+    font-weight:700;
+}
+
+ul li a:hover {
+    background: #009acd;
+}

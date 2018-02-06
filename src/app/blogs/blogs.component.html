@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="columns" id="search">
+    <h1>Comments:</h1>
+    <p>Please type in any comments.</p>
+
+    <form #form="ngForm" (ngSubmit)="addComments(form.value)">
+      <input type="text" placeholder="Type in title." name="title" [(ngModel)]="title">
+      <textarea placeholder="Please type in Comments.." name="description" [(ngModel)]="description" rows="5"></textarea>
+
+      <button id="btn" type="submit">Add Comments</button>
+    </form>
+  </div>
+  <div class="columns" id="search">
+    <p id="output-label">Number of Comments: {{ comments.length}}</p>
+
+    <ul id="comments-list">
+      <li [@commentsAnim]="state" *ngFor="let comment of comments; let i = index">{{comment.title}}
+        <img src="assets/delete.png" (click)="removeComment(i)">
+        <p>{{ comment.description }}</p>
+      </li>
+    </ul>
+  </div>
+</div>

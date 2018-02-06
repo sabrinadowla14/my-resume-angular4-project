@@ -25,3 +25,24 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Project: My Resume Website
+I have used Angular 4 framework. I have created this website, while I was trying  to get a certificate in Angular4 from Lynda.com 
+codes are taken from Lynda.com.
+In header section I have my Blog where you can type any job title and description of a job. In Coverletter I have the description of my 
+cover Letter.
+
+To see the entire project list you have to enter the space bar.
+If you click on any project it's going to show you the description of the project.
+
+Install nodejs: https:nodejs.org (added node package manager)
+node -v to check the latest version.
+In the terminal type npm install @angular/cli -g (only have to install only once.)
+To install a new project: ng new projectName
+cd into the folder.
+To see our project: ng serve
+Open a web browser and navigate to localhost:4200
+
+Note: In angular 4 the animations are no longer a part of the angular library.
+We have to use npm to install the animations.
+On the console type: npm install @angular/animations --save
+In app.module.ts we have to import BrowsersAnimationsModule from @angular/platform-browser/animations.
